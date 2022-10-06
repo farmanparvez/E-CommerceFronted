@@ -1,0 +1,16 @@
+@import "./mixins";
+
+.center {
+  @include center();
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-wrapper {
+  @include centerWithValue(center, center, 80%, 100%);
+  margin: 30px auto;
+}
