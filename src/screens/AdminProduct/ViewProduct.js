@@ -4,6 +4,7 @@ import { Card } from "react-bootstrap";
 // import Rating from './Rating'
 import { useSelector } from "react-redux";
 import Modal from "react-bootstrap/Modal";
+import { apiUrl } from "../../utils/url";
 
 const ViewProduct = () => {
   const { data: product } = useSelector((state) => state.product);
@@ -25,7 +26,7 @@ const ViewProduct = () => {
             {/* <img src={product.image} alt="Girl in a jacket" width="500" height="600"></img> */}
             <Card.Img
               style={{ width: "200px", height: "200px" }}
-              src={"http://localhost:3000/" + product.image}
+              src={apiUrl + product.image}
               variant="top"
             />
             {/* <Card.Img src={"http://localhost:8000/" + product.image} variant='top' /> */}
